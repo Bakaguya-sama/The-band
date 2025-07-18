@@ -21,7 +21,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <t class="nav-down-arrow ti-angle-down"></t>
                     </a>
@@ -37,12 +37,11 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-
-            <div class="menu-mobile-btn">
-                <i class="menu-icon ti-menu"></i>
-            </div>
             <!-- End: Search -->
 
+            <div id="mobile-menu" class="menu-mobile-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
         </div>
 
         <div id="slider">
@@ -250,20 +249,28 @@
         });
 
         // Responsive Menu
-        const mobileMenuBtn = document.querySelector('.menu-mobile-btn');
-        const nav = document.querySelector('#nav');
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
 
-        mobileMenuBtn.addEventListener('click', function () {
-            nav.classList.toggle('open');
-        });
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        };
 
-        // Đóng menu khi bấm vào 1 mục
-        const menuItems = document.querySelectorAll('#nav li a');
-        menuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                nav.classList.remove('open');
-            });
-        });
+        // Automatically close the menu when clicking on a nav item
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        console.log(menuItems);
+
+        for (var i = 0; i < menuItems.length; i++) {
+            menuItems[i].onclick = function () {
+                header.style.height = null; // Đóng menu khi click vào bất kỳ mục nào khác
+            }
+        }
     </script>
 </body>
 

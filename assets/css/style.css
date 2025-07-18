@@ -126,6 +126,7 @@ html {
    right: 0;
    /* Thuộc tính giúp chìm nổi phần tử */
    z-index: 1;
+   overflow: hidden;
 }
 
 #nav, .subnav {
@@ -214,11 +215,13 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   font-size: 14px;
 }
 
+#header .menu-mobile-btn,
 #header .search-btn {
   /* Thuộc tính giúp phần tử trôi nổi ở bên nào(ở đây cụ thể là bên phải) */
   float: right;
   padding: 0 21px;
 }
+
 /* Khi di vào nút button search đổi màu */
 #header .search-btn:hover {
   background-color: #f44336;
@@ -226,7 +229,16 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   cursor: pointer;
 }
 
+#header .menu-mobile-btn:hover {
+    background-color: #ccc;
+}
+
+#header .menu-mobile-btn:hover .menu-icon {
+    color: #000;
+}
+
 /* Chỉnh icon search ở header */
+#header .menu-icon,
 #header .search-icon {
   color: #fff;
   font-size: 20px;
