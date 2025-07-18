@@ -215,6 +215,15 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   font-size: 14px;
 }
 
+#header .menu-mobile-btn {
+    position: absolute; 
+    /* Vì header có positon là fixed nên có thể được xem như cha */
+    top: 0;
+    right: 0;
+    display: none;
+    /* Ẩn nút menu mobile */
+}
+
 #header .menu-mobile-btn,
 #header .search-btn {
   /* Thuộc tính giúp phần tử trôi nổi ở bên nào(ở đây cụ thể là bên phải) */
