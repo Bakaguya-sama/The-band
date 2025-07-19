@@ -264,13 +264,34 @@
 
         // Automatically close the menu when clicking on a nav item
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        console.log(menuItems);
-
         for (var i = 0; i < menuItems.length; i++) {
-            menuItems[i].onclick = function () {
-                header.style.height = null; // Đóng menu khi click vào bất kỳ mục nào khác
+            menuItems[i].onclick = function (event) {
+                var isSiblingAndContainsSubnav = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (!isSiblingAndContainsSubnav) {
+                    header.style.height = null; // Đóng menu nếu không phải là mục "More"
+                } else {
+                    event.preventDefault(); // Ngăn chặn hành động mặc định nếu là mục "More"
+
+                    var subnav = this.nextElementSibling;
+                    // Toggle hiển thị subnav theo display
+                    var isOpen = subnav.style.display === 'block';
+                    subnav.style.display = isOpen ? 'none' : 'block';
+                }
             }
         }
+
+        // var menuItems = document.querySelectorAll('#nav > li > a[href*="#"]');
+
+        // menuItems.forEach(function (menuItem) {
+        //     var parentLi = menuItem.parentElement;
+        //     var hasSubnav = parentLi.querySelector('.subnav');
+
+        //     if (!hasSubnav) {
+        //         menuItem.onclick = function () {
+        //             header.style.height = null; // Đóng menu nếu không phải là mục "More"
+        //         };
+        //     }
+        // });
     </script>
 </body>
 
