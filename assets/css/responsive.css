@@ -2,8 +2,17 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+    .mobile-full-width {
+        width: 100% !important;
+        /* Used for mobile buttons */
+    }
+
     .mobile-col-1{
-        width: 100%;
+        width: 100% !important;
+    }
+
+    .mobile-mt-8 {
+        margin-top: 8px !important;
     }
     
     #header {
@@ -45,13 +54,12 @@
         /* Mobile nút bấm từ 42 đến 46px */
     }
 
-    #content .mobile-member-item {
-        margin-top: 30px;
-        width: 100%;
-    }
-
     #content .avatar {
         width: 60%;
+    }
+
+    .contact-form {
+        margin-top: 16px;
     }
 }
 
