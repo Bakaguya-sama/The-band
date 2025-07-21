@@ -296,7 +296,7 @@ và chỉ ảnh hưởng đến subnav là con của nav */
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 16px 112px;
+    padding: 64px 16px 96px;
 }
 
 #content .section-heading {
@@ -408,6 +408,15 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 .place-description {
     line-height: 1.4;
     margin: 15px 0;
+}
+
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 #footer {

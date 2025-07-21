@@ -59,12 +59,48 @@
     }
 
     .contact-form {
-        margin-top: 16px;
+        margin-top: 32px;
     }
 }
 
 /* Tablet */
-@media (min-width: 740px) and (max-width: 1023px) {}
+@media (min-width: 740px) and (max-width: 1023px) {
+}
 
 /* Desktop */
 @media (min-width: 1024px) {}
+
+/* Table and Mobile */
+@media (max-width: 1023px) {
+    .btn {
+        padding: 15px 16px;
+        /* Nút bấm trên mobile và tablet phải trên 42px */
+    }
+
+    #nav .subnav a {
+        padding: 5px 12px;
+    }
+
+    .contact-form .form-control {
+        padding: 15px;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
+
+    #footer .social-media {
+        font-size: 48px;
+        /* Icon social media trên footer */
+    }
+
+    #footer .social-media a {
+        margin: 0 8px;
+        /* Khoảng cách giữa các icon */
+    }
+
+    #footer .copyright a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+}
