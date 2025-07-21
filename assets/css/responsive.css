@@ -83,6 +83,11 @@
 
     .contact-form .form-control {
         padding: 15px;
+        font-size: 16px;
+    }
+
+    .contact-form .mobile-contact-submit-btn {
+        font-size: 16px;
     }
 
     .contact-info {
@@ -90,7 +95,7 @@
     }
 
     #footer .social-media {
-        font-size: 48px;
+        font-size: 32px;
         /* Icon social media trên footer */
     }
 

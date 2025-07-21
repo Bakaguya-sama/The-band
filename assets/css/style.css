@@ -104,6 +104,9 @@ html {
     font-size: 15px;
     font-family: lato, sans-serif;
     text-align: center;
+    -webkit-appearance: none;
+    appearance: none;
+    /* Loại bỏ kiểu dáng mặc định của nút */
 }
 
 .btn:hover {
