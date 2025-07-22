@@ -1,7 +1,7 @@
 /* Break point */
 
 /* Mobile */
-@media (max-width: 740px) {
+@media (max-width: 46.1875em) {
     .mobile-full-width {
         width: 100% !important;
         /* Used for mobile buttons */
@@ -64,14 +64,14 @@
 }
 
 /* Tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
 }
 
 /* Desktop */
-@media (min-width: 1024px) {}
+@media (min-width: 64em) {}
 
 /* Table and Mobile */
-@media (max-width: 1023px) {
+@media (max-width: 63.9375em) {
     .btn {
         padding: 15px 16px;
         /* Nút bấm trên mobile và tablet phải trên 42px */
